@@ -609,5 +609,5 @@ describe("authored Google font stylesheet", () => {
     );
 
     expect(result).toContain(b64(LOCAL_FONT_BYTES));
-  });
+  }, 15_000); // The system font locator runs system_profiler on macOS which can take >5s.
 });
